@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interações Iniciais</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: azure;
+        }
+
+        #conteiner {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            background-color: aqua;
+        }
+
+        #conteiner > p {
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="conteiner">
+        <p>Interaja...</p>
+    </div>
+
+    <script>
+        var a = document.getElementsByTagName('p')[0]
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.backgroundColor = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou'
+            a.style.background = 'green'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu'
+            a.style.background = 'yellow'
+        }
+
+    </script>
+    
+</body>
+</html>

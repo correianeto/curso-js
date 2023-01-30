@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interações Iniciais</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: azure;
+        }
+
+        #conteiner {
+            width: 300px;
+            height: 250px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            background-color: aqua;
+        }
+
+        #conteiner > h1 {
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        form {
+            position: absolute;
+            padding: 10px;
+        }
+        
+        input {
+            width: 276px;
+            margin: 5px 0px;
+        }
+
+        label {
+            font-family: cursive;
+        }
+
+        .button {
+            width: 50%;
+            margin: auto;
+            display: block;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .res {
+            border: solid 2px black;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 5px;
+            display: block;
+            background-color: azure;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="conteiner">
+        <h1>Calculadora Simples:</h1>
+        <form action="#" method="post">
+            <label for="tn1">Digite um número:</label> <br>
+            <input type="number" name="tn1" id="tn1" required value="0.0"> <br>
+            <label for="tn2">Digite outro número:</label> <br>
+            <input type="number" name="tn2" id="tn2" required value="0.0" step="0" class="last"> <br>
+            <input type="button" value="Somar" class="button" onclick="somar()">
+            <div class="res">Resultado:</div>
+        </form>
+    </div>
+
+    <script>
+        function somar() {
+            var tn1 = document.getElementById('tn1')
+            var tn2 = document.getElementById('tn2')
+            var res = document.getElementsByClassName('res')[0]
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+
+            res.innerHTML = `Resultado: A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+    </script>
+    
+</body>
+</html>
