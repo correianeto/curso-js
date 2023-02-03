@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+</head>
+<body>
+    <h1>Verificando um estrangeiro</h1>
+    <label for="txtnac">Digite seu país de origem:</label>
+    <input type="text" name="txtnac" id="txtnac" placeholder="Seu país">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var nac = document.getElementById('txtnac')
+            var res = document.querySelector('div#res')
+            if (nac.value == 'Brasil') {
+                res.innerHTML = `<p>O país que você mora é <strong>${nac.value}</strong>, logo você é <strong>brasileiro</strong></p>`
+            }else {
+                res.innerHTML = `<p>O país que você mora é <strong>${nac.value}</strong>, logo você é <strong>estrangeiro</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
