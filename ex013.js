@@ -1,0 +1,18 @@
+
+function parimp (n){
+    if (n%2==0){
+        return 'par'
+    } else {
+        return 'impar'
+    }
+} 
+var num = 25
+
+var res = parimp(num)
+console.log(`O número ${num} é ${res}`)
+
+function somar(n1=0, n2=0){
+    return n1 - n2
+}
+
+console.log(somar(1,2))
