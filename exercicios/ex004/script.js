@@ -51,6 +51,7 @@ function finalizar() {
                 menor = valores[pos]}
         }
 
+        num.focus()
         media = soma/total
         res.innerHTML = ''
         res.innerHTML += `<br><p>Ao todo temos ${total} números cadastrados</p>`
