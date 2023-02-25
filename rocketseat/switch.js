@@ -1,6 +1,6 @@
 
 function calcular (number1, operador, number2) {
-    let resultado
+    let resultado = ''
 
     switch (operador) {
         case "+":
@@ -19,6 +19,8 @@ function calcular (number1, operador, number2) {
             console.log('Operação não definida, cara de bosta')
             break
     }
+
+    return resultado
 }
 
-console.log(calcular(2, '+', 5))
+console.log(calcular(2, '%', 5))
