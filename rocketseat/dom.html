@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando DOM</title>
+</head>
+<body>
+    <header>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit, nihil provident, nisi ea expedita facilis voluptates quaerat voluptatibus accusantium officiis ipsam dolor odit architecto veritatis magni soluta enim vitae natus?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga incidunt id, excepturi eveniet esse ratione laboriosam quibusdam, voluptas provident nesciunt unde iure, adipisci sapiente corporis distinctio ullam optio dolor impedit?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sint iste fugiat obcaecati beatae? Voluptatum, facere adipisci! Ratione fuga dignissimos rem sequi, similique exercitationem nemo! Dolorum excepturi aliquam autem veniam.</p>
+    </header>
+
+    <script>
+        const div = document.createElement('div')
+        div.innerHTML = 'Oi pexual'
+        const header = document.getElementsByTagName('header') [0]
+        const p = document.getElementsByTagName('p') [0]
+        header.insertBefore(div, p)
+    </script>
+</body>
+</html>
