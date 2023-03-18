@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando flexbox</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.1em;
+        }
+
+        html {
+            height: 100vh;
+        }
+        
+        .conteiner {
+            height: 99.5vh;
+            display: flex;
+            border: 1px solid black;
+        }
+
+        aside {
+            background-color: antiquewhite;
+            flex: 1;
+        }
+
+        main {
+            background-color: aqua;
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        section:nth-child(1) {
+            background-color: aquamarine;
+            flex: 1;
+        }
+
+        section:nth-child(2) {
+            background-color: cadetblue ;
+            flex: 2;
+        }
+
+        section:nth-child(3) {
+            background-color: darkgoldenrod;
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <aside>Aside</aside>
+        <main>
+            Main
+            <section onclick="clicar()" onmouseout="sair()">Content 1</section>
+            <section>Content 2</section>
+            <section>Content 3</section>
+        </main>
+    </div>
+    <script>
+        function clicar () {
+            let a = document.getElementsByTagName('section')[0]
+            a.style.backgroundColor = 'red'
+            a.innerHTML = 'Sai logo otário'
+        }
+
+        function sair() {
+            let a = document.getElementsByTagName('section')[0]
+            a.style.backgroundColor = ''
+            a.innerHTML = 'Chou'
+        }
+    </script>
+</body>
+</html>
