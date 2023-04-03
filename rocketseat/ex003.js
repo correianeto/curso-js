@@ -4,7 +4,7 @@ let number = 213.1233123
 
 console.log(number.toFixed(2).replace('.', ','))
 
-let word = 'Programa é muito bacana'
+let word = 'Programar é muito bacana'
 let word2 = 'PROGRAMAR É MUITO BACANA'
 
 console.log(word.toLocaleUpperCase())
