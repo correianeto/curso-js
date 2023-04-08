@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <%- include('head') %>
+    <%- include('../partials/head') %>
 
 <body class="container">
     
-    <%- include('header') %>
+    <%- include('../partials/header', {pagina: 'sobre', numero: '2'}) %>
 
     <main>
         <div class="jumbotron">
@@ -14,7 +14,7 @@
         </div>
     </main>
 
-    <%- include('footer') %>
+    <%- include('../partials/footer') %>
 
 </body>
 </html>
