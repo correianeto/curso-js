@@ -17,7 +17,7 @@ function soma(array) {
 
 function calcular() {
     let calcularReceitas = soma(gastos.receitas)
-    let calcularDespesas = soma(gastos.despesas)
+    let calcularDespesas = soma(gastosno.despesas)
     let saldo = calcularReceitas - calcularDespesas
     let mensagem = 'Negativo'
     if (saldo >= 0) {

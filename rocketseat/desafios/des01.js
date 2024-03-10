@@ -16,4 +16,4 @@ function converter (nota) {
     }
 }
 
-converter(-1)
+converter(90)
